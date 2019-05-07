@@ -10,6 +10,7 @@
     </parent>
     <groupId>com.github.dingey</groupId>
     <artifactId>mybatis-mapper-spring-boot-starter</artifactId>
+    <packaging>jar</packaging>
     <version>0.1</version>
     <url>https://github.com/dingey/mybatis-mapper-spring-boot-starter</url>
     <name>mybatis-mapper</name>
