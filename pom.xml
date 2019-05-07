@@ -13,8 +13,8 @@
     <packaging>jar</packaging>
     <version>0.2.1</version>
     <url>https://github.com/dingey/mybatis-mapper-spring-starter</url>
-    <name>mybatis-mapper</name>
-    <description>mybatis mapper starter</description>
+    <name>mybatis-mapper-spring-starter</name>
+    <description>mybatis mapper spring starter</description>
 
     <dependencies>
         <dependency>
