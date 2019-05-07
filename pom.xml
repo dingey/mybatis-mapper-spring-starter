@@ -9,7 +9,7 @@
         <version>2.1.4.RELEASE</version>
     </parent>
     <groupId>com.github.dingey</groupId>
-    <artifactId>mybatis-mapper-spring-boot-starter</artifactId>
+    <artifactId>mybatis-mapper-spring-starter</artifactId>
     <packaging>jar</packaging>
     <version>0.2.1</version>
     <url>https://github.com/dingey/mybatis-mapper-spring-starter</url>
