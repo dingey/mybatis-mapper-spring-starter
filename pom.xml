@@ -11,7 +11,7 @@
     <groupId>com.github.dingey</groupId>
     <artifactId>mybatis-mapper-spring-starter</artifactId>
     <packaging>jar</packaging>
-    <version>0.2.1</version>
+    <version>0.2.2</version>
     <url>https://github.com/dingey/mybatis-mapper-spring-starter</url>
     <name>mybatis-mapper-spring-starter</name>
     <description>mybatis mapper spring starter</description>

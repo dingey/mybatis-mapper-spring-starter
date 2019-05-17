@@ -1,0 +1,39 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.github.dingey.mybatis.mapper.MybatisMapperProperties",
+      "name": "mybatis.mapper",
+      "type": "com.github.dingey.mybatis.mapper.MybatisMapperProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.github.dingey.mybatis.mapper.MybatisMapperProperties",
+      "defaultValue": true,
+      "name": "mybatis.mapper.camel-case",
+      "description": "set table and column name camel case",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.dingey.mybatis.mapper.MybatisMapperProperties",
+      "defaultValue": false,
+      "name": "mybatis.mapper.column-upper",
+      "description": "set column name uppercase",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.dingey.mybatis.mapper.MybatisMapperProperties",
+      "name": "mybatis.mapper.table-prefix",
+      "description": "set the table prefix",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.dingey.mybatis.mapper.MybatisMapperProperties",
+      "defaultValue": false,
+      "name": "mybatis.mapper.table-upper",
+      "description": "set table name uppercase",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}
