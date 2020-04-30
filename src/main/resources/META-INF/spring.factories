@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.github.dingey.mybatis.mapper.MybatisMapperConfiguration
+  com.github.dingey.mybatis.mapper.MybatisMapperAutoConfiguration,\
+  com.github.dingey.mybatis.mapper.MapResultsConfiguration

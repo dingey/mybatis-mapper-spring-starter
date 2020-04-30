@@ -2,6 +2,8 @@ package com.github.dingey.mybatis.mapper;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import javax.annotation.PostConstruct;
+
 /**
  * @author d
  */
@@ -9,8 +11,18 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class MybatisMapperProperties implements MapperProperties {
     private boolean camelCase = true;
     private boolean columnUpper = false;
+    private boolean mapResults = false;
+    private boolean sequence = false;
     private String tablePrefix = "";
     private boolean tableUpper = false;
+
+    @PostConstruct
+    public void init() {
+        Const.camelCase = this.camelCase;
+        Const.columnUpper = this.columnUpper;
+        Const.tablePrefix = this.tablePrefix;
+        Const.tableUpper = this.tableUpper;
+    }
 
     @Override
     public boolean isCamelCase() {
@@ -46,5 +58,21 @@ public class MybatisMapperProperties implements MapperProperties {
 
     public void setColumnUpper(boolean columnUpper) {
         this.columnUpper = columnUpper;
+    }
+
+    public boolean isMapResults() {
+        return mapResults;
+    }
+
+    public void setMapResults(boolean mapResults) {
+        this.mapResults = mapResults;
+    }
+
+    public boolean isSequence() {
+        return sequence;
+    }
+
+    public void setSequence(boolean sequence) {
+        this.sequence = sequence;
     }
 }

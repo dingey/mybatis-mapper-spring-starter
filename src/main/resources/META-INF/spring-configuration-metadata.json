@@ -34,6 +34,20 @@
       "name": "mybatis.mapper.table-upper",
       "description": "set table name uppercase",
       "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.dingey.mybatis.mapper.MybatisMapperProperties",
+      "defaultValue": false,
+      "name": "mybatis.mapper.sequence",
+      "description": "set sequence annotation enable",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.dingey.mybatis.mapper.MybatisMapperProperties",
+      "defaultValue": false,
+      "name": "mybatis.mapper.map-results",
+      "description": "set MapResults annotation enable",
+      "type": "java.lang.Boolean"
     }
   ]
 }
