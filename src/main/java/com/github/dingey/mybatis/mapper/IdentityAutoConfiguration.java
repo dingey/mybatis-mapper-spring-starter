@@ -13,18 +13,17 @@ import java.util.List;
 
 @Configuration
 @ConditionalOnBean({SqlSessionFactory.class})
-@ConditionalOnProperty(value = "mybatis.mapper.strategy", havingValue = "sequence")
+@ConditionalOnProperty(value = "mybatis.mapper.strategy", havingValue = "identity")
 @AutoConfigureAfter({MybatisAutoConfiguration.class})
-public class SequenceAutoConfiguration {
-
+public class IdentityAutoConfiguration {
     @Resource
     private List<SqlSessionFactory> sqlSessionFactoryList;
 
     @PostConstruct
-    public void addPageInterceptor() {
-        SequenceInterceptor sequenceInterceptor = new SequenceInterceptor();
+    public void init() {
+        IdentityInterceptor autoKeyInterceptor = new IdentityInterceptor();
         for (SqlSessionFactory sqlSessionFactory : this.sqlSessionFactoryList) {
-            sqlSessionFactory.getConfiguration().addInterceptor(sequenceInterceptor);
+            sqlSessionFactory.getConfiguration().addInterceptor(autoKeyInterceptor);
         }
     }
 }

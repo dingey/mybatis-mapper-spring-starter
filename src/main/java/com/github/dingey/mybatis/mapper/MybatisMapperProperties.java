@@ -3,18 +3,37 @@ package com.github.dingey.mybatis.mapper;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.GenerationType;
 
 /**
  * @author d
  */
 @ConfigurationProperties(prefix = "mybatis.mapper")
 public class MybatisMapperProperties implements MapperProperties {
+    /**
+     * set table and column name camel case
+     */
     private boolean camelCase = true;
+    /**
+     * set column name uppercase
+     */
     private boolean columnUpper = false;
-    private boolean mapResults = false;
-    private boolean sequence = false;
+    /**
+     * set Map key column1,value column2  annotation enable
+     */
+    private boolean mapKey = false;
+    /**
+     * set the table prefix
+     */
     private String tablePrefix = "";
+    /**
+     * set table name uppercase
+     */
     private boolean tableUpper = false;
+    /**
+     * set primary key generate strategy support AUTO/IDENTITY/SEQUENCE
+     */
+    private GenerationType strategy;
 
     @PostConstruct
     public void init() {
@@ -60,19 +79,19 @@ public class MybatisMapperProperties implements MapperProperties {
         this.columnUpper = columnUpper;
     }
 
-    public boolean isMapResults() {
-        return mapResults;
+    public boolean isMapKey() {
+        return mapKey;
     }
 
-    public void setMapResults(boolean mapResults) {
-        this.mapResults = mapResults;
+    public void setMapKey(boolean mapKey) {
+        this.mapKey = mapKey;
     }
 
-    public boolean isSequence() {
-        return sequence;
+    public GenerationType getStrategy() {
+        return strategy;
     }
 
-    public void setSequence(boolean sequence) {
-        this.sequence = sequence;
+    public void setStrategy(GenerationType strategy) {
+        this.strategy = strategy;
     }
 }

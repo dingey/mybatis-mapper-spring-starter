@@ -13,17 +13,17 @@ import java.util.List;
 
 @Configuration
 @ConditionalOnBean({SqlSessionFactory.class})
-@ConditionalOnProperty(value = "mybatis.mapper.map-results", havingValue = "true")
+@ConditionalOnProperty(value = "mybatis.mapper.map-key", havingValue = "true")
 @AutoConfigureAfter({MybatisAutoConfiguration.class})
-public class MapResultsConfiguration {
+public class MapKeyConfiguration {
     @Resource
     private List<SqlSessionFactory> sqlSessionFactoryList;
 
     @PostConstruct
     public void init() {
-        MapResultsInterceptor mapResultsInterceptor = new MapResultsInterceptor();
+        MapKeyInterceptor mapKeyInterceptor = new MapKeyInterceptor();
         for (SqlSessionFactory sqlSessionFactory : this.sqlSessionFactoryList) {
-            sqlSessionFactory.getConfiguration().addInterceptor(mapResultsInterceptor);
+            sqlSessionFactory.getConfiguration().addInterceptor(mapKeyInterceptor);
         }
     }
 }
