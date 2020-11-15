@@ -13,7 +13,7 @@ import java.util.List;
 
 @Configuration
 @ConditionalOnBean({SqlSessionFactory.class})
-@ConditionalOnProperty(value = "mybatis.mapper.strategy", havingValue = "identity")
+@ConditionalOnProperty(value = "mybatis.mapper.strategy", havingValue = "identity",matchIfMissing = true)
 @AutoConfigureAfter({MybatisAutoConfiguration.class})
 public class IdentityAutoConfiguration {
     @Resource

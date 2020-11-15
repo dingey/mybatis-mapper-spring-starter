@@ -21,7 +21,7 @@ public class SequenceAutoConfiguration {
     private List<SqlSessionFactory> sqlSessionFactoryList;
 
     @PostConstruct
-    public void addPageInterceptor() {
+    public void init() {
         SequenceInterceptor sequenceInterceptor = new SequenceInterceptor();
         for (SqlSessionFactory sqlSessionFactory : this.sqlSessionFactoryList) {
             sqlSessionFactory.getConfiguration().addInterceptor(sequenceInterceptor);
