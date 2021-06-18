@@ -1,5 +1,6 @@
 package com.github.dingey.mybatis.mapper;
 
+import com.github.dingey.mybatis.mapper.utils.Const;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import javax.annotation.PostConstruct;

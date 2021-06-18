@@ -11,7 +11,7 @@
     <groupId>com.github.dingey</groupId>
     <artifactId>mybatis-mapper-spring-starter</artifactId>
     <packaging>jar</packaging>
-    <version>0.4.1</version>
+    <version>0.5.0</version>
     <url>https://github.com/dingey/mybatis-mapper-spring-starter</url>
     <name>mybatis-mapper-spring-starter</name>
     <description>mybatis mapper spring starter</description>
@@ -30,12 +30,12 @@
         <dependency>
             <groupId>com.github.dingey</groupId>
             <artifactId>mybatis-mapper</artifactId>
-            <version>0.4.1</version>
+            <version>0.5.0</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.1</version>
+            <version>2.1.4</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
